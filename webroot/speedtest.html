@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: unsafe-inline; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self' data: unsafe-inline; script-src 'self'">
+    <title>Host Info App | Network Speedtest Powered by Fast.com</title>
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <link rel="stylesheet" href="./styles/speedtest.css" />
+    <script src="scripts/helper-funcs.js"></script>
+    <script src="scripts/main-menu.js"></script>
+    <script src="scripts/ipc-funcs.js"></script>
+    <script src="scripts/sysinfo.js"></script>
+    <script src="scripts/controllers/speedtest.main.js"></script>
+  </head>
+  <body>
+    <div id="app-main-menu"></div>
+    <div class="alert alert-primary" role="alert" id="webview-notice">
+      If the site below is having issues loading, <a href="#" id="external-fastdotcom-link">click here</a> to open the site externally.
+    </div>
+    <webview id="webview" src="https://fast.com/"></webview>
+  </body>
+</html>

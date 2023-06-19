@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self' data:; script-src 'self'">
+    <title>Host Info App | Network Information</title>
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <link rel="stylesheet" href="./styles/network.css" />
+    <script src="scripts/helper-funcs.js"></script>
+    <script src="scripts/main-menu.js"></script>
+    <script src="scripts/ipc-funcs.js"></script>
+    <script src="scripts/sysinfo.js"></script>
+    <script src="scripts/controllers/network.main.js"></script>
+  </head>
+  <body>
+    <div id="app-main-menu"></div>
+    <div id="pageinfo-jumbotron"  class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Network Information</h1>
+        <p class="lead">This page contains information about your computer's network interfaces and their connection status.</p>
+      </div>
+    </div id="pageinfo-jumbotron">
+    <div class="accordion" id="ipAddr-accordion"></div>  
+  </body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "name": "hostinfoapp",
+  "version": "1.0.0",
+  "description": "Provides a simple GUI displaying information about the host machine.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Alex Colson <dev@ajcolson.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^4.4.1",
+    "electron": "^7.1.7",
+    "electron-builder": "^22.2.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0",
+    "systeminformation": "^4.16.0"
+  },
+  "build": {
+    "appId": "com.ajcolson.hostinfoapp",
+    "productName": "HostInfoApp",
+    "copyright": "Copyright © 2020 ${author}",
+    "mac": {
+      "icon": "./pages/assets/icons/mac/icon.icns",
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "icon": "./pages/assets/icons/png/256.png"
+    },
+    "files": [
+      "./build/**/*",
+      "./dist/**/*",
+      "./node_modules/**/*",
+      "./pages/**/*",
+      "*.js"
+    ],
+    "directories": {
+      "buildResources": "pages"
+    }
+  },
+  "dependencies": {
+    "@mdi/font": "^4.9.95"
+  }
+}

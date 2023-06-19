@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self' data:; script-src 'self'">
+    <title>Host Info App | Battery Information</title>
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <link rel="stylesheet" href="./styles/battery.css" />
+    <script src="scripts/helper-funcs.js"></script>
+    <script src="scripts/main-menu.js"></script>
+    <script src="scripts/ipc-funcs.js"></script>
+    <script src="scripts/sysinfo.js"></script>
+    <script src="scripts/controllers/battery.main.js"></script>
+  </head>
+  <body>
+    <div id="app-main-menu"></div>
+    <div id="pageinfo-jumbotron" class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Battery Information</h1>
+        <p class="lead">This page has information about your computer's battery.</p>
+      </div>
+    </div>
+    <div id="alerts" class="p-3"></div>
+    <div id="main" class="p-3">
+        <ul id="battery-stats-list" class="list-group">
+          <li class="list-group-item">
+            <h4>Battery Charge</h4>
+            <div id="battery-progress"></div>
+          </li> 
+          <li class="list-group-item">
+            <h4>Connected To External Power Source</h4>
+            <span id="battery-acconnected"></span>
+          </li>
+          <li class="list-group-item">
+            <h4>Currently Charging</h4>
+            <span id="battery-ischarging"></span>
+          </li>
+          <li class="list-group-item">
+            <h4>Manufacturer</h4>
+            <span id="battery-manufacturer"></span>
+          </li>
+          <li class="list-group-item">
+            <h4>Serial Number</h4>
+            <span id="battery-serial"></span>
+          </li>
+        </ul>
+      </div>
+  </body>
+</html>

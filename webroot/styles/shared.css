@@ -1,0 +1,28 @@
+@import url("../../node_modules/bootstrap/dist/css/bootstrap.css");
+@import url("../../node_modules/@mdi/font/css/materialdesignicons.css");
+
+body{
+  padding: 2px !important;
+  margin-top: 42px;
+}
+#app-main-menu{
+  position: fixed;
+  top: 0;
+  background-color: #fefefe;
+  user-select: none;
+  width: 100%;
+  z-index:1035;
+}
+
+.capatilized-word{
+  text-transform: capitalize;
+}
+
+#pageinfo-jumbotron{
+  margin-bottom: 5px !important;
+  user-select: none;
+}
+
+.no-select{
+  user-select: none;
+}

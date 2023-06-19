@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self' data:; script-src 'self'">
+    <title>Host Info App</title>
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <script src="scripts/helper-funcs.js"></script>
+    <script src="scripts/main-menu.js"></script>
+    <script src="scripts/ipc-funcs.js"></script>
+    <script src="scripts/sysinfo.js"></script>
+    <script src="scripts/controllers/home.main.js"></script>
+  </head>
+  <body>
+    <div id="app-main-menu"></div>
+    <div class="p-3">
+        <div class="shadow card m-1">
+            <div class="card-body">
+                <h5 class="card-title">OS Information</h5>
+                <p class="card-text">Get information about your computer's operating system.</p>
+                <a href="os.html" class="btn btn-primary">Go</a>
+            </div>
+        </div>
+        <div class="shadow card m-1">
+            <div class="card-body">
+                <h5 class="card-title">Network Information</h5>
+                <p class="card-text">Get information about your computer's network interfaces and their connection status.</p>
+                <a href="network.html" class="btn btn-primary">Go</a>
+            </div>
+        </div>
+        <div class="shadow card m-1">
+            <div class="card-body">
+                <h5 class="card-title">Battery Information</h5>
+                <p class="card-text">Get information about your computer's battery.</p>
+                <a href="battery.html" class="btn btn-primary">Go</a>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

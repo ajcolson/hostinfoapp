@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self' data:; script-src 'self'">
+    <title>Host Info App | App Settings</title>
+    <link rel="stylesheet" href="./styles/shared.css" />
+    <link rel="stylesheet" href="./styles/settings.css" />
+    <script src="scripts/helper-funcs.js"></script>
+    <script src="scripts/main-menu.js"></script>
+    <script src="scripts/ipc-funcs.js"></script>
+    <script src="scripts/sysinfo.js"></script>
+    <script src="scripts/controllers/settings.main.js"></script>
+  </head>
+  <body>
+    <div id="app-main-menu"></div>
+    <div class="p-3 no-select">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <h3>Tabs</h3>
+          Choose what tabs are shown in the top bar:
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="showOSTabSwitch" checked>
+            <label class="custom-control-label" for="showOSTabSwitch">OS</label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="showNetworkTabSwitch" checked>
+            <label class="custom-control-label" for="showNetworkTabSwitch">Network</label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="showBatteryTabSwitch" checked>
+            <label class="custom-control-label" for="showBatteryTabSwitch">Battery</label>
+          </div>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="showSpeedtestTabSwitch">
+            <label class="custom-control-label" for="showSpeedtestTabSwitch">Speedtest</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <h3>Theme</h3>
+          Choose what theme the app is displayed in:
+          <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" class="custom-control-input" checked>
+              <label class="custom-control-label" for="customRadio1">Light Theme</label>
+          </div>
+          <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" class="custom-control-input" disabled>
+              <label class="custom-control-label" for="customRadio2">Dark Theme (Coming soon...)</label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <h3>Developer Options</h3>
+          <div id="devOptionsSwitchContainer" class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="devOptionsSwitch">
+            <label class="custom-control-label" for="devOptionsSwitch">Enable Developer Options</label>
+          </div>
+          <button id="showDevConsoleBtn" type="button" class="btn btn-sm btn-outline-primary" disabled>Toggle Dev Console</button>
+          <button id="showDebugPageBtn" type="button" class="btn btn-sm btn-outline-primary" disabled>Show Debug Page</button>
+        </li>
+      </ul>
+    </div>
+    <div class="modal fade no-select" id="devOptionsWarnModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel"><span class="mdi mdi-alert-outline"></span> Are you sure?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Enabling Developer Options will allow you to make changes directly to this app while its running. You should only enable these features if you know what you are doing.
+          </div>
+          <div class="modal-footer">
+            <button id="doEnableDevToolsBtn" type="button" class="btn btn-outline-danger" data-dismiss="modal">Enable</button>
+            <button type="button" class="btn btn-success" data-dismiss="modal">Don't Enable</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
